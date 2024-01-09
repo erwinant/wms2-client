@@ -1,0 +1,20 @@
+// app global css in SCSS form
+.rounded-md {
+    border-radius: 7px;
+}
+.rounded-lg {
+    border-radius: 10px;
+}
+.q-table th {
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #edeff1;
+    text-transform: uppercase;
+}
+.q-table tbody td {
+    font-size: 14px;
+}
+
+.btn-fixed-width {
+    width: 200px;
+}
