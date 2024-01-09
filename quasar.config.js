@@ -10,7 +10,6 @@
 
 const { configure } = require('quasar/wrappers');
 const path = require('path');
-const envparser = require('./src/envparser.js');
 
 module.exports = configure(function (/* ctx */) {
     return {
@@ -64,7 +63,10 @@ module.exports = configure(function (/* ctx */) {
 
             // publicPath: '/',
             // analyze: true,
-            env: envparser(),
+            env: {
+                WMS_API_URL: process.env.WMS_API_URL,
+                TIKTOK_AUTH_URL: process.env.TIKTOK_AUTH_URL,
+            },
             // rawDefine: {}
             // ignorePublicFolder: true,
             // minify: false,
