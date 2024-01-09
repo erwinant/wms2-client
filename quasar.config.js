@@ -11,6 +11,7 @@
 const { configure } = require('quasar/wrappers');
 const path = require('path');
 const envparser = require('./src/envparser.js');
+const dotEnv = require('dotenv');
 
 module.exports = configure(function (/* ctx */) {
     return {
@@ -64,7 +65,7 @@ module.exports = configure(function (/* ctx */) {
 
             // publicPath: '/',
             // analyze: true,
-            env: envparser(),
+            env: dotEnv.config().parsed,
             // rawDefine: {}
             // ignorePublicFolder: true,
             // minify: false,
